@@ -1,7 +1,7 @@
 # 🔯 React-classBased-Example
 ## Stateful
 ## Class Type Components
-class Cat extends React.Component {
+```class Cat extends React.Component {
   constructor(props) {
     super(props);
 
@@ -19,4 +19,4 @@ class Cat extends React.Component {
       </div>
     );
   }
-}
+}```
