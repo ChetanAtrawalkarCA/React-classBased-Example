@@ -1,7 +1,7 @@
 # 🔯 React-classBased-Example
 ## Stateful
 ## Class Type Components
-```
+```js
 class Cat extends React.Component {
   constructor(props) {
     super(props);
