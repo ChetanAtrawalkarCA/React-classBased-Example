@@ -91,13 +91,13 @@ this.setState({ value: 1 });
 ```
 + Keep in mind that setState is asynchronous so you should be careful when using the current state to set a new state. A good example of this would be if you want to increment a value in your state.
 
-###The Wrong Way
+### The Wrong Way:-
 ```jsx
 this.setState({ value: this.state.value + 1 });
 ```
 + This can lead to unexpected behavior in your app if the code above is called multiple times in the same update cycle. To avoid this you can pass an updater callback function to setState instead of an object.
 
-###The Right Way
+### The Right Way:-
 ```jsx
 this.setState(prevState => ({ value: prevState.value + 1 }));
 ```
