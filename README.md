@@ -101,3 +101,9 @@ this.setState({ value: this.state.value + 1 });
 ```jsx
 this.setState(prevState => ({ value: prevState.value + 1 }));
 ```
+
+### The Cleaner Way:-
+```jsx
+this.setState(({ value }) => ({ value: value + 1 }));
+```
++ When only a limited number of fields in the state object is required, object destructing can be used for cleaner code.
