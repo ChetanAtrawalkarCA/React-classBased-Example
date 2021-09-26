@@ -107,3 +107,73 @@ this.setState(prevState => ({ value: prevState.value + 1 }));
 this.setState(({ value }) => ({ value: value + 1 }));
 ```
 + When only a limited number of fields in the state object is required, object destructing can be used for cleaner code.
+
+## React State VS Props Example
+When we start working with React components, we frequently hear two terms. They are state and props. So, in this article we will explore what are those and how they differ.
+
+### State:
++ State is something that a component owns. It belongs to that particular component where it is defined. For example, a person’s age is a state of that person.
++ State is mutable. But it can be changed only by that component that owns it. As I only can change my age, not anyone else.
++ You can change a state by using this.setState()
+
+**See the below example to get an idea of state:
+
+### Person.js
+```JSX
+  import React from 'react';
+
+  class Person extends React.Component{
+    constructor(props) {
+      super(props);
+      this.state = {
+        age:0
+      this.incrementAge = this.incrementAge.bind(this)
+    }
+
+    incrementAge(){
+      this.setState({
+        age:this.state.age + 1;
+      });
+    }
+
+    render(){
+      return(
+        <div>
+          <label>My age is: {this.state.age}</label>
+          <button onClick={this.incrementAge}>Grow me older !!<button>
+        </div>
+      );
+    }
+  }
+
+  export default Person;
+  ```
++ In the above example, age is the state of Person component.
+
+## Props:
++ Props are similar to method arguments. They are passed to a component where that component is used.
++ Props is immutable. They are read-only.
+
+**See the below example to get an idea of Props:
+
+### Person.js
+```JSX
+  import React from 'react';
+
+  class Person extends React.Component{
+    render(){
+      return(
+        <div>
+          <label>I am a {this.props.character} person.</label>
+        </div>
+      );
+    }
+  }
+
+  export default Person;
+const person = <Person character = "good"></Person>
+```
++ In the above example, ``const person = <Person character = "good"></Person>`` we are passing ``character = "good"`` prop to ``Person`` component.
+
++ It gives output as “I am a good person”, in fact I am.
+
