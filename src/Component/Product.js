@@ -8,13 +8,13 @@ const products = [
     price: 5
   },
   {
-    emoji: '🍩',
-    name: 'donuts',
+    emoji: ' 🍔 ',
+    name: 'burger',
     price: 2.5,
   },
   {
-    emoji: '🍉',
-    name: 'watermelon',
+    emoji: ' 🎂 ',
+    name: 'cake',
     price: 4
   }
 ];
