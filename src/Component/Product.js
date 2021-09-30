@@ -39,12 +39,13 @@ export default class Product extends Component {
     maximumFractionDigits: 2,
   }
 
-
+// Get total of products
   getTotal = () => {
     const total = this.state.cart.reduce((totalCost, item) => totalCost + item.price, 0);
     return total.toLocaleString(undefined, this.currencyOptions)
   }
   
+// Remove products from cart
   remove = (product) => {
     this.setState(state => {
       const cart = [...state.cart];
