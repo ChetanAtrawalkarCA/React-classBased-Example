@@ -25,6 +25,8 @@ export default class Product extends Component {
     cart: [],
   }
 
+// Add products into cart
+
   add = (product) => {
     this.setState(state => ({
       cart: [...state.cart, product],
@@ -36,6 +38,7 @@ export default class Product extends Component {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }
+
 
   getTotal = () => {
     const total = this.state.cart.reduce((totalCost, item) => totalCost + item.price, 0);
